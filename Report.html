@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>بلاغ دعم فني</title>
+  <style>
+    body {
+     font-family: 'Cairo', sans-serif;
+      background-color: #f6f2e9;
+      margin: 0;
+      padding: 0;
+      background-image: url('moh-bg.jpg'); 
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      position: relative;
+      z-index: 0;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.6); 
+      z-index: -1;
+    }
+   .container {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px 40px;
+      border-radius: 10px;
+      width: 450px;
+      margin: 40px auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #014421;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .ticket-id {
+      color: #15803d;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="file"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 70px;
+    }
+
+    .submit-btn {
+      background-color: #014421;
+      color: white;
+      padding: 12px;
+      margin-top: 25px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .submit-btn:hover {
+      background-color: #016b2a;
+    }
+
+    .footer-logo {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .footer-logo img {
+      width: 200px;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .footer .sub {
+      font-size: 11px;
+      color: #aaa;
+      margin-top: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2> بلاغ دعم فني</h2>
+    <div class="ticket-id">رقم التذكرة: TKT-2025-0001</div>
+
+    <form action="submit_ticket.php" method="POST" enctype="multipart/form-data">
+      <label for="name">الاسم الكامل</label>
+      <input type="text" id="name" name="name" placeholder="أدخل اسمك الكامل">
+
+      <label for="mobile">رقم الجوال</label>
+      <input type="tel" id="mobile" name="mobile" placeholder="05XXXXXXXX">
+
+      <label for="department">الإدارة</label>
+      <input type="text" id="department" name="department" placeholder="أدخل اسم الإدارة">
+
+      <label for="problem-type">نوع المشكلة</label>
+      <select id="problem-type" name="problem-type">
+        <option>اختر نوع المشكلة</option>
+        <option>عطل في جهاز الكمبيوتر</option>
+        <option>عطل في الإنترنت</option>
+        <option>الهاتف</option>
+        <option>أخرى</option>
+      </select>
+
+      <label for="description">وصف المشكلة</label>
+      <textarea id="description" name="description" placeholder="اكتب تفاصيل المشكلة هنا..."></textarea>
+
+      <label for="device-info">اسم الجهاز / الرقم التسلسلي</label>
+      <input type="text" id="device-info" name="device-info" placeholder="أدخل رقم الجهاز أو اسمه">
+
+      <label for="attachment">رفع مرفق</label>
+      <input type="file" id="attachment" name="attachment">
+
+      <button class="submit-btn" type="submit">إرسال البلاغ</button>
+    </form>
+
+    <div class="footer-logo">
+      <img src=" https://www.diabetersa.com/wp-content/uploads/2020/06/KSA-MOH-Logo.png" alt="شعار وزارة الصحة" width="200">
+     <div class="footer">
+    <p>تقنية المعلومات والاتصالات - فرع وزارة الصحة بحفرالباطن</p>
+    <p class="sub">مركز الدعم الفني 2025</p>
+  </div>
+
+  </div>
+</body>
+</html
